@@ -1,0 +1,199 @@
+/* POUR Website Global Styles – Inspired Watercolor Edition */
+
+/* Reset margins and apply a modern, legible font family.  The body background
+   uses our scanned watercolor paper texture to create a unified, tactile
+   surface across the entire site.  By fixing the background we allow
+   content to scroll over the paper rather than dragging the paper along. */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background: url('02cb08f1-5daf-42b4-83ee-00e047bcaafa.png') no-repeat center/
+    cover fixed;
+}
+
+/* Sticky navigation bar with a frosted glass effect.  The translucent white
+   allows the watercolor paper to show through while ensuring text remains
+   readable. */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-links li a:hover {
+  color: #8b4513; /* warm tea tone on hover */
+}
+
+/* Hero sections cover most of the viewport height and are centred.  We apply
+   a gentle dark overlay so the headline and subhead remain legible over
+   detailed photography. */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Lightened overlay for hero backgrounds.  A lower opacity preserves the
+   softness of underlying paintings and photographs while still improving
+   contrast for text. */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #8b4513;
+  color: #fff;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #a0522d;
+}
+
+/* Generic section styling with ample whitespace to evoke calm and spaciousness. */
+.section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4b2e2e;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Card grid for feature highlights.  Each card uses a semi‑transparent
+   background and a subtle drop shadow.  Images are desaturated and warmed
+   slightly to harmonize with our watercolor palette. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  filter: saturate(0.7) contrast(0.85) brightness(1.1) sepia(0.15);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+}
+
+/* Footer styling.  A dark backdrop anchors the page and provides a clear
+   termination point. */
+.footer {
+  background: rgba(0, 0, 0, 0.85);
+  color: #ddd;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer a {
+  color: #bbb;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
